@@ -1,0 +1,126 @@
+# settings-schema.json
+{
+    "layout": {
+        "type": "layout",
+        "pages": ["aparencia", "comportamento"],
+        "aparencia": {
+            "type": "page",
+            "title": "Aparência",
+            "sections": ["visual", "cores"]
+        },
+        "comportamento": {
+            "type": "page", 
+            "title": "Comportamento",
+            "sections": ["posicao", "outros"]
+        },
+        "visual": {
+            "type": "section",
+            "title": "Visual",
+            "keys": ["calendar-size", "transparency", "border-radius"]
+        },
+        "cores": {
+            "type": "section",
+            "title": "Cores",
+            "keys": ["background-color", "accent-color", "text-color"]
+        },
+        "posicao": {
+            "type": "section",
+            "title": "Posição",
+            "keys": ["default-position", "remember-position"]
+        },
+        "outros": {
+            "type": "section",
+            "title": "Outros",
+            "keys": ["show-week-numbers", "start-with-calendar", "auto-hide"]
+        }
+    },
+    "calendar-size": {
+        "type": "combobox",
+        "default": "normal",
+        "options": {
+            "pequeno": "pequeno",
+            "normal": "normal", 
+            "grande": "grande"
+        },
+        "description": "Tamanho do calendário",
+        "tooltip": "Escolha o tamanho do calendário flutuante"
+    },
+    "transparency": {
+        "type": "scale",
+        "default": 95,
+        "min": 70,
+        "max": 100,
+        "step": 5,
+        "description": "Transparência (%)",
+        "tooltip": "Ajuste a transparência do fundo do calendário"
+    },
+    "border-radius": {
+        "type": "spinbutton",
+        "default": 15,
+        "min": 0,
+        "max": 30,
+        "step": 1,
+        "units": "px",
+        "description": "Raio da borda",
+        "tooltip": "Arredondamento das bordas do calendário"
+    },
+    "background-color": {
+        "type": "colorchooser",
+        "default": "rgba(40, 40, 40, 0.95)",
+        "description": "Cor de fundo",
+        "tooltip": "Cor de fundo do calendário"
+    },
+    "accent-color": {
+        "type": "colorchooser", 
+        "default": "#4a90e2",
+        "description": "Cor de destaque",
+        "tooltip": "Cor usada para botões e destaques"
+    },
+    "text-color": {
+        "type": "colorchooser",
+        "default": "#ffffff", 
+        "description": "Cor do texto",
+        "tooltip": "Cor do texto do calendário"
+    },
+    "default-position": {
+        "type": "combobox",
+        "default": "center",
+        "options": {
+            "Centro": "center",
+            "Superior Direito": "top-right",
+            "Superior Esquerdo": "top-left", 
+            "Inferior Direito": "bottom-right",
+            "Inferior Esquerdo": "bottom-left"
+        },
+        "description": "Posição padrão",
+        "tooltip": "Posição inicial do calendário na tela"
+    },
+    "remember-position": {
+        "type": "checkbox",
+        "default": true,
+        "description": "Lembrar posição",
+        "tooltip": "Lembrar a última posição do calendário"
+    },
+    "show-week-numbers": {
+        "type": "checkbox",
+        "default": false,
+        "description": "Mostrar números das semanas",
+        "tooltip": "Exibir o número da semana ao lado esquerdo"
+    },
+    "start-with-calendar": {
+        "type": "checkbox",
+        "default": false,
+        "description": "Iniciar com calendário visível",
+        "tooltip": "Mostrar o calendário automaticamente ao carregar o applet"
+    },
+    "auto-hide": {
+        "type": "spinbutton",
+        "default": 0,
+        "min": 0,
+        "max": 300,
+        "step": 5,
+        "units": "segundos",
+        "description": "Auto-ocultar após (0 = nunca)",
+        "tooltip": "Ocultar automaticamente o calendário após o tempo especificado"
+    }
+}
